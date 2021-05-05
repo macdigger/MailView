@@ -2,6 +2,9 @@
 import PackageDescription
 let package = Package(
     name: "MailView",
+    platforms: [
+        .iOS("14.0")
+    ],
     products: [
         .library(name: "MailView", targets: ["MailView"])
     ],

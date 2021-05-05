@@ -3,6 +3,10 @@
 SwiftUI equivalent of MFMailComposeViewController
 
 
+Changes:
+- updated target platform to be ios 14, so that all the @Binding stuff is supported
+
+
 ## Installation:
 
 ### Swift Package Manager:
