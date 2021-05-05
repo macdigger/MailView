@@ -42,7 +42,8 @@ public struct MailView: UIViewControllerRepresentable {
                 messageBody: String = "",
                 isHtml: Bool = false,
                 attachments: [AttachmentData]? = nil,
-                preferredSendingAddress: String = "") {
+                preferredSendingAddress: String = "",
+                tineColor: Color = .accentColor) {
         self._isShowing = isShowing
         
         self.resultHandler = resultHandler
@@ -87,6 +88,9 @@ public struct MailView: UIViewControllerRepresentable {
                                              mimeType: attachment.1,
                                              fileName: attachment.2)
         }
+        
+        viewController.navigationBar.tintColor = UIColor(tintColor)
+        
         return viewController
     }
     
