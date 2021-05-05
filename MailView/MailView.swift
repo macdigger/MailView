@@ -28,6 +28,8 @@ public struct MailView: UIViewControllerRepresentable {
     let messageBody: String
     let isHtml: Bool
     
+    let tintColor: Color
+    
     let attachments: [AttachmentData]?
     
     let preferredSendingAddress: String
@@ -43,7 +45,7 @@ public struct MailView: UIViewControllerRepresentable {
                 isHtml: Bool = false,
                 attachments: [AttachmentData]? = nil,
                 preferredSendingAddress: String = "",
-                tineColor: Color = .accentColor) {
+                tintColor: Color = .accentColor) {
         self._isShowing = isShowing
         
         self.resultHandler = resultHandler
@@ -56,6 +58,8 @@ public struct MailView: UIViewControllerRepresentable {
         
         self.messageBody = messageBody
         self.isHtml = isHtml
+        
+        self.tintColor = tintColor
         
         self.attachments = attachments
         
